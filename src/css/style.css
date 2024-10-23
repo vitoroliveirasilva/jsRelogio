@@ -1,0 +1,78 @@
+/* ===== Importação da fonte (Google Fonts) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ===== Variáveis de cores globais ===== */
+:root {
+    --background: linear-gradient(180deg, var(--cronometro-borda), #5c0fcf);
+    --cronometro-background: #262626;
+    --cronometro-borda: #955ffa;
+    --white: #fff;
+}
+
+
+/* ===== Estilo geral ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', Courier, monospace;
+    background: None;
+}
+
+
+/* ===== Estilo para o body da página ===== */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--background);
+}
+
+
+/* ===== Estilo para o card do relógio ===== */
+#card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    width: 550px;
+    background: var(--cronometro-background);
+    border-radius: 50px;
+    padding: 1.5rem;
+}
+
+
+/* ===== Estilo para o relógio no card ===== */
+#card #relogio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 90px;
+    color: var(--white);
+    border: 3px solid var(--cronometro-borda);
+    border-radius: 35px;
+    cursor: default;
+}
+
+
+/* ===== Estilo para dispositivos menores ===== */
+@media screen and (max-width: 625px) {
+
+    /* ===== Estilo adaptado para o card do relógio ===== */
+    #card {
+        width: 80%;
+        height: 20%;
+        padding: 1rem;
+    }
+    
+    /* ===== Estilo adaptado para o relógio no card ===== */
+    #card #relogio {
+        font-size: 60px;
+    }
+
+}
